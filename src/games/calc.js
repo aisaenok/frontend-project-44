@@ -1,13 +1,10 @@
 import runGame from '../index.js';
+import {getRandomNumber} from '../utils.js';
 
 const GAME_DESCRIPTION = 'What is the result of the expression?';
 const MIN_RANDOM_NUMBER = 1;
 const MAX_RANDOM_NUMBER = 100;
 const OPERATORS = ['+', '-', '*'];
-
-const getRandomNumber = (min, max) => (
-  Math.floor(Math.random() * (max - min + 1)) + min
-);
 
 const getRandomOperator = () => {
   const randomIndex = getRandomNumber(0, OPERATORS.length - 1);
